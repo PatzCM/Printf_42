@@ -1,5 +1,5 @@
-#ifndef LIBFTPRINT_H
-# define LIBFTPRINT_H
+#ifndef FT_PRINT_H
+# define FT_PRINT_H
 
 # include <stdarg.h>
 # include <limits.h>

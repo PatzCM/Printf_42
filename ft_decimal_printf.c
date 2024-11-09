@@ -1,5 +1,5 @@
 #include "Libft/libft.h"
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_decimal_printf(int n)
 {
