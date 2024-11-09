@@ -22,11 +22,11 @@ OBJS = ${SRCS:.c=.o}
 NAME = libftprintf.a
 #Name is the name of the file. .a is static library.
 # all is the basic rule of makefile whenever there's no rule input.(make )
-LIBS= Libft/libft.a
+LIBS= libft/libft.a
 all: deps ${NAME}
 #Dependencies
 deps:
-	make -C Libft
+	make -C libft
 
 #Name calls the objects and then compiles (ar rc) calling the name of the file and objects to compile.
 ${NAME}: ${OBJS} ${DEPS}
@@ -34,14 +34,14 @@ ${NAME}: ${OBJS} ${DEPS}
 #Delete the .o files
 clean:
 	${RM} ${OBJS}
-	make -C Libft clean
+	make -C libft clean
 #Delete the .o file with clean + remove .a file with $NAME.
 fclean: clean
 	${RM} ${NAME}
-	make -C Libft fclean
+	make -C libft fclean
 #Clean everything (.o & .a)
 re: fclean all
-	make -C Libft re
+	make -C libft re
 
 
 #To not allow overlap of rules

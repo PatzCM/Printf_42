@@ -1,5 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_nbr_printf.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: palexand <palexand@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/09 13:06:31 by palexand          #+#    #+#             */
+/*   Updated: 2024/11/09 13:06:31 by palexand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
-#include "Libft/libft.h"
+#include "libft/libft.h"
+
+int	ft_nbr_printf(int n);
 
 int	ft_nbrlen(int n)
 {
