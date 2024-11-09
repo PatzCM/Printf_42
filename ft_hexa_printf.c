@@ -25,6 +25,8 @@ int	ft_hexa_printf(unsigned int n, int upper_or_lower)
 		base = "0123456789abcdef";
 	else
 		base = "0123456789ABCDEF";
+	if (n == 0)
+		return (write(1, "0", 1));
 	while (n > 0)
 	{
 		digit[i++] = base[n % 16];

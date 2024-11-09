@@ -29,7 +29,9 @@ int	ft_pointer_printf(void *hex)
 	unsigned long		value;
 	char				hexadecimal[19];
 	int					index;
-
+	
+	if (hex == NULL)
+		return (write(1, "(nil)", 5));
 	value = (unsigned long)hex;
 	index = 18;
 	hexadecimal[0] = '0';

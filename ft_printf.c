@@ -12,6 +12,7 @@
 
 #include "ft_printf.h"
 #include "libft/libft.h"
+#include <limits.h>
 #define MIN_INT -2147483648
 
 static int	ft_args(va_list args, char var_type);
@@ -50,13 +51,13 @@ static int	ft_args(va_list args, char var_type)
 	if (var_type == 'p')
 		return (ft_pointer_printf(va_arg(args, void *)));
 	if (var_type == 'd')
-		ft_nbr_printf(va_arg(args, int));
+		return (ft_nbr_printf(va_arg(args, int)));
 	if (var_type == 'u')
-		ft_nbr_printf(va_arg(args, unsigned int));
+		return (ft_unbr_printf(va_arg(args, unsigned int)));
 	if (var_type == 'x')
-		ft_hexa_printf(va_arg(args, unsigned int), 0);
+		return (ft_hexa_printf(va_arg(args, unsigned int), 0));
 	if (var_type == 'X')
-		ft_hexa_printf(va_arg(args, unsigned int), 1);
+		return (ft_hexa_printf(va_arg(args, unsigned int), 1));
 	if (var_type == '%')
 		ft_putchar_fd('%', 1);
 	if (var_type == '%' || var_type == 'c')
@@ -64,3 +65,18 @@ static int	ft_args(va_list args, char var_type)
 	else
 		return (0);
 }
+
+/*int  main (void)*/
+/*{*/
+/*	ft_printf("x_lower 0: %x\n", 0);*/
+/*	ft_printf("x_lower long_min: %x\n", -214748364);*/
+/*	ft_printf("x_upper 0: %x\n", 0);*/
+/*	ft_printf("x_upper long_min: %x\n", -214748364);*/
+/**/
+/**/
+/*	printf("x_lower_original 0: %x\n", 0);*/
+/*	printf("x_lower_original long_min: %x\n", -214748364);*/
+/*	printf("x_upper_original 0: %x\n", 0);*/
+/*	printf("x_upper_original long_min: %x\n", -214748364);*/
+/**/
+/*}*/
